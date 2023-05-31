@@ -1,0 +1,22 @@
+<html>
+    <head>
+<title>DZ03 Z02</title>
+</head>
+<body>
+<script language="JavaScript">
+    function promijeni(){
+        var i;
+        var hexa = "0123456789ABCDEF";
+        var start = "#";
+        for(i=0; i<6; i++){
+          start+=hexa[Math.floor(Math.random()*16)];
+        }
+        document.body.style.backgroundColor = start;
+        document.getElementById("boja").innerHTML="Boja: "+start;
+    }
+</script>
+<button onClick="promijeni()">Promijeni pozadinu</button>
+<br> 
+<h3 id="boja">Boja: #FFFFFF</h3>
+</body>
+</html>

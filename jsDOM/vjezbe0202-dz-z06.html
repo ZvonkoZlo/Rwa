@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>DZ03 Z06</title>
+    <script>
+        function zbroji(a,b){
+            var a = form.br_1.value;
+            var b = form.br_2.value;
+            a = parseFloat(a);
+            b = parseFloat(b);
+            ispis.value = a + b;
+        }
+    </script>
+</head>
+<body>
+    <form id="form">
+        X = <input type="number" id="br_1"><br>
+        Y = <input type="number" id="br_2"><br>
+        <input type="button" value="Zbroji" onclick="zbroji(br_1,br_2);"><hr>
+    </form>
+    Rezultat = <input type="number" id="ispis">
+</body>
+</html>

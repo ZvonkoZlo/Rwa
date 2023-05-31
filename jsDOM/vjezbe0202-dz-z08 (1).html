@@ -1,0 +1,109 @@
+<html>
+<head>
+    <title>DZ03 Z08</title>
+    <script>
+        function zbroji(a,b){
+            var a = form.br_1.value;
+            var b = form.br_2.value;
+            a = parseFloat(a);
+            b = parseFloat(b);
+            alert("Rezultat: " + a + " + " + b + " = " + (a+b));
+        }
+        function oduzmi(a,b){
+            var a = form.br_1.value;
+            var b = form.br_2.value;
+            a = parseFloat(a);
+            b = parseFloat(b);
+            alert("Rezultat: " + a + " - " + b + " = " + (a-b));
+        }
+        function mnozi(a,b){
+            var a = form.br_1.value;
+            var b = form.br_2.value;
+            a = parseFloat(a);
+            b = parseFloat(b);
+            alert("Rezultat: " + a + " * " + b + " = " + (a*b));
+        }
+        function dijeli(a,b){
+            var a = form.br_1.value;
+            var b = form.br_2.value;
+            a = parseFloat(a);
+            b = parseFloat(b);
+            alert("Rezultat: " + a + " / " + b + " = " + (a/b));
+        }
+        function sin(a,b){
+            var a = form.br_1.value;
+            var b = form.br_2.value;
+            a = parseFloat(a);
+            b = parseFloat(b);
+            alert("Sinus " + a + " : " + Math.sin(a) + " Sinus " + b + " : " + Math.sin(b));
+        }
+        function cos(a,b){
+            var a = form.br_1.value;
+            var b = form.br_2.value;
+            a = parseFloat(a);
+            b = parseFloat(b);
+            alert("Kosinus " + a + " : " + Math.cos(a) + " Ksoinus " + b + " : " + Math.cos(b));
+        }
+        function tan(a,b){
+            var a = form.br_1.value;
+            var b = form.br_2.value;
+            a = parseFloat(a);
+            b = parseFloat(b);
+            alert("Tangens " + a + " : " + Math.tan(a) + " Tangens " + b + " : " + Math.tan(b));
+        }
+        function ln(a,b){
+            var a = form.br_1.value;
+            var b = form.br_2.value;
+            a = parseFloat(a);
+            b = parseFloat(b);
+            alert("Ln " + a + " : " + Math.log(a) + " Ln " + b + " : " + Math.log(b));
+        }
+        function log(a,b){
+            var a = form.br_1.value;
+            var b = form.br_2.value;
+            a = parseFloat(a);
+            b = parseFloat(b);
+            alert("Log " + a + " : " + Math.log10(a) + " Log " + b + " : " + Math.log10(b));
+        }
+        function kvadrat(a,b){
+            var a = form.br_1.value;
+            var b = form.br_2.value;
+            a = parseFloat(a);
+            b = parseFloat(b);
+            alert("Kvadrat " + a + " : " + (a*a) + " kvadrat " + b + " : " + (b*b));
+        }
+        function kub(a,b){
+            var a = form.br_1.value;
+            var b = form.br_2.value;
+            a = parseFloat(a);
+            b = parseFloat(b);
+            alert("Kub " + a + " : " + (a*a*a) + " kub " + b + " : " + (b*b*b));
+        }
+        function potencija(a,b){
+            var a = form.br_1.value;
+            var b = form.br_2.value;
+            a = parseFloat(a);
+            b = parseFloat(b);
+            alert("Potencija broja " + a + " na " + b + " : " + Math.pow(a,b));
+        }
+    </script>
+</head>
+<body>
+    <form id="form">
+        <input type="number" id="br_1">operand1<br><br>
+        <input type="number" id="br_2">operand2<br><br>
+        <input type="button" value="+" onclick="zbroji(br_1,br_2);">
+        <input type="button" value="-" onclick="oduzmi(br_1,br_2);">
+        <input type="button" value="*" onclick="mnozi(br_1,br_2);">
+        <input type="button" value="/" onclick="dijeli(br_1,br_2);"><br><br>
+        <input type="button" value="sin" onclick="sin(br_1,br_2);">
+        <input type="button" value="cos" onclick="cos(br_1,br_2);">
+        <input type="button" value="tan" onclick="tan(br_1,br_2);"><br><br>
+        <input type="button" value="ln" onclick="ln(br_1,br_2);">
+        <input type="button" value="log" onclick="log(br_1,br_2);"><br><br>
+        <input type="button" value="^2" onclick="kvadrat(br_1,br_2);">
+        <input type="button" value="^3" onclick="kub(br_1,br_2);">
+        <input type="button" value="^n" onclick="potencija(br_1,br_2);">
+    </form>
+</body>
+</html>

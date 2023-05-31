@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>DZ03 Z09</title>
+    <script>
+        var radi = 0;
+        function promjena(){
+            if (radi == 0) {
+                document.getElementById("prekidac").src="prekidacON.png";
+                document.getElementById("zarulja").src="zaruljaON.png";
+                radi = 1;
+            }
+            else{
+                document.getElementById("prekidac").src="prekidacOFF.png";
+                document.getElementById("zarulja").src="zaruljaOFF.png";
+                radi = 0;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <img src="prekidacOFF.png" id="prekidac" onclick="promjena();">
+    <img src="zaruljaOFF.png" id="zarulja">
+</body>
+</html>

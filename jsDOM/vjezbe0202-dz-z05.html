@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>DZ03 Z05</title>
+    <script>
+        function validate(jmbg) {
+            var JMBG = a.value;
+            var i;
+        var n = JMBG.length;
+        for(i=0; i<n; i++){
+          if(JMBG[i]=='.'){
+            document.getElementById('poruka').innerHTML="Niste upisali broj od 13 znamenki";
+            return false;
+          }
+        }
+        if(i!=13 || isNaN(JMBG)){
+          document.getElementById('poruka').innerHTML="Niste upisali broj od 13 znamenki";
+          return false;
+        }
+        //Ako upisan cijeli broj od 13 znamenkki ulazi se u else
+        else{
+          var daniUmjesecu=[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+          var dan=parseInt(JMBG[0]);
+          dan*=10;
+          dan+=parseInt(JMBG[1]);
+          var mjesec=parseInt(JMBG[2]);
+          mjesec*=10;
+          mjesec+=parseInt(JMBG[3]);
+          var godina=parseInt(JMBG[4]);
+          godina*=10;
+          godina+=parseInt(JMBG[5]);
+          godina*=10;
+          godina+=parseInt(JMBG[6]);
+
+          if(mjesec<1 || mjesec>12){
+            document.getElementById('poruka').innerHTML="Neispravan JMBG";
+            return false;
+          }
+          else{
+            var daniUtrenutnomMjesecu=daniUmjesecu[mjesec-1];
+          }
+          if(dan<1 || dan>daniUtrenutnomMjesecu){
+            document.getElementById('poruka').innerHTML="Neispravan JMBG";
+            return false;
+          }
+          if( !((godina>=900 && godina<=999) || (godina>=0 && godina<=21)) ){
+            document.getElementById('poruka').innerHTML="Neispravan JMBG";
+            return false;
+          }
+          document.getElementById('poruka').innerHTML="Ispravno unesen JMBG";
+            return true;
+        }
+        }
+    </script>
+</head>
+<body>
+    <input id="a" type="text">
+    <input onclick="validate(a);" type="button" value="Validacija">
+    <p id="poruka"></p>
+</body>
+</html>

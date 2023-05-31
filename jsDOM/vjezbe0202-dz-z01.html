@@ -1,0 +1,30 @@
+<html>
+    <head>
+<title>DZ03 Z01</title>
+</head>
+<body>
+<script language="JavaScript">
+
+    var n = prompt("Unesite broj n:");
+    var sum=0;
+    for(i=1;i<=n;i++){
+        sum += i;
+    }
+    var ar = sum/n;
+
+var product=1;
+
+for(i=1;i<=n;i++){
+
+    product=product*i;
+
+}
+var gs=Math.pow(product, 1 / n);
+
+document.write(" Unijeli ste broj: "+(n)+"<br>");
+document.write(" Aritmetička sredina prirodni brojeva od 1 do "+(n)+" je "+(ar)+".<br>");
+document.write(" Geometrijska sredina prirodni brojeva od 1 do "+(n)+" je "+(gs)+".<br>");
+</script>
+
+</body>
+</html>

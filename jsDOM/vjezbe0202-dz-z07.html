@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>DZ03 Z07</title>
+    <script>
+        function izracunaj(day,month,year){
+            var d = form.dan.value;
+            var m = form.mjesec.value;
+            var g = form.godina.value;
+            
+            var trenutni_d = new Date();
+            var trenutni_dan = trenutni_d.getDate();
+            var trenutni_mjesec = trenutni_d.getMonth();
+            trenutni_mjesec++;
+            var trenutni_godina = trenutni_d.getUTCFullYear();
+            console.log(trenutni_dan+". "+trenutni_mjesec+". "+trenutni_godina+".")
+            var brdana = parseInt(trenutni_dan) - parseInt(d);
+            var brmjeseci = parseInt(trenutni_mjesec) - parseInt(m);
+            var brgodina = parseInt(trenutni_godina) - parseInt(g);
+
+            alert("Imate " + brgodina + " godina.");
+        }
+    </script>
+</head>
+<body>
+    <form id="form">
+        Unesite dan (01-31) = <input type="text" id="dan"><br><br>
+        Unesite mjesec (01-12) = <input type="text" id="mjesec"><br><br>
+        Unesite godinu (npr. 1970) = <input type="text" id="godina"><br><br>
+        <input type="button" value="Izracunaj" onclick="izracunaj(dan,mjesec,godina);">
+    </form>
+</body>
+</html>

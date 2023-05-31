@@ -1,0 +1,25 @@
+<html>
+    <head>
+<title>DZ03 Z04</title>
+</head>
+<body>
+<script language="JavaScript">
+    function funkcija(){
+        var ocjena = document.forms["form"]["ocjena"].value;
+        if (ocjena.localeCompare("1")==0) document.getElementById('ispis').innerHTML="1 - Nedovoljan";
+        else if (ocjena.localeCompare("2")==0) document.getElementById('ispis').innerHTML="2 - Dovoljan";
+        else if (ocjena.localeCompare("3")==0) document.getElementById('ispis').innerHTML="3 - Dobar";
+        else if (ocjena.localeCompare("4")==0) document.getElementById('ispis').innerHTML="4 - Vrlo dobar";
+        else if (ocjena.localeCompare("5")==0) document.getElementById('ispis').innerHTML="5 - Odličan";
+        else document.getElementById('ispis').innerHTML="Morate upisati broj od 1 do 5.";
+        
+    }
+</script>
+    <form onsubmit="funkcija(); return false" id="form">
+        Ocjena:
+        <input id="ocjena" type="text">
+        <input type="submit" value="Potvrdi">
+    </form>
+    <p id="ispis"></p>
+</body>
+</html>
